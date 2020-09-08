@@ -19,6 +19,7 @@ import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 
 
@@ -32,7 +33,9 @@ import { IndexComponent } from './index/index.component';
     LoginComponent,
     RegistroComponent,
     MenuComponent,
-    IndexComponent
+    IndexComponent,
+    TemperatureComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,10 @@ import { IndexComponent } from './index/index.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
+    
+    
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]

@@ -8,12 +8,14 @@ import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { ProdGuardService as guard } from './guards/prod-guard.service';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'temperature', component: TemperatureComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'lista', component: ListaProductoComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },
   { path: 'detalle/:id', component: DetalleProductoComponent, canActivate: [guard], data: { expectedRol: ['admin', 'user'] } },

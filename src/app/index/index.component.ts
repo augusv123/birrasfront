@@ -9,17 +9,17 @@ import { TokenService } from '../service/token.service';
 export class IndexComponent implements OnInit {
 
   isLogged = false;
-  nombreUsuario = '';
+  userName = '';
 
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
-      this.nombreUsuario = this.tokenService.getUserName();
+      this.userName = this.tokenService.getUserName();
     } else {
       this.isLogged = false;
-      this.nombreUsuario = '';
+      this.userName = '';
     }
   }
 
